@@ -1,0 +1,13 @@
+.DS_Store
+
+# zsh
+z
+.histfile
+.zcompdump
+.zsh_*
+
+# Wallpapers
+/system/wallpapers/images/*/*.jpg
+/system/wallpapers/images/*/*.png
+/system/wallpapers/images/*/*.jpeg
+!/system/wallpapers/images/*/output.heic
