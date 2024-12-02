@@ -1,0 +1,126 @@
+{
+  "editor.fontFamily": "Zed Mono, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontSize": 15,
+  "editor.lineHeight": 18.5,
+  "editor.letterSpacing": 0.3,
+  "files.trimTrailingWhitespace": true,
+  "editor.renderWhitespace": "none",
+  "editor.formatOnSave": true,
+  "workbench.colorTheme": "Sequoia Monochrome",
+
+  "vue.inlayHints.vBindShorthand": true,
+  "diffEditor.ignoreTrimWhitespace": true,
+  "workbench.iconTheme": "vscode-icon-theme",
+  "git.suggestSmartCommit": false,
+  "github.gitProtocol": "ssh",
+  "emmet.includeLanguages": {
+    "javascript": "javascript",
+    "vue-html": "html",
+    "vue-javascript": "javascript"
+  },
+
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "d"],
+      "after": ["d", "d"]
+    },
+    {
+      "before": ["<C-n>"],
+      "commands": [":nohl"]
+    },
+    {
+      "before": ["K"],
+      "commands": ["lineBreakInsert"],
+      "silent": true
+    }
+  ],
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false
+  },
+
+  "vim.normalModeKeyBindings": [
+    {
+      "before": [":"],
+      "commands": ["workbench.action.showCommands"],
+      "silent": true
+    },
+    {
+      "before": ["<leader>", "x"],
+      "commands": [":q"],
+      "silent": true
+    }
+  ],
+
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
+
+  "vim.statusBarColorControl": false,
+  "editor.minimap.renderCharacters": false,
+  "explorer.confirmDelete": false,
+  "editor.minimap.enabled": false,
+  "git.confirmSync": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "vim.smartRelativeLine": true,
+  "git.ignoreRebaseWarning": true,
+  "emmet.syntaxProfiles": {},
+  "gruvboxMaterial.colorfulSyntax": true,
+  "gruvboxMaterial.darkContrast": "hard",
+  "editor.semanticHighlighting.enabled": false,
+
+  // Color Customizations
+  "workbench.colorCustomizations": {
+    "[City Lights]": {
+      "sideBar.background": "#1D252C"
+    }
+  },
+  "editor.tokenColorCustomizations": {
+    // "[City Lights]": {
+    //   "comments": "#68A1F0"
+    // }
+  },
+
+  // Linting and Formatting
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "prettier.enable": true,
+  "prettier.semi": true,
+  "prettier.singleQuote": false,
+  "prettier.bracketSpacing": true,
+  "prettier.printWidth": 80,
+  "prettier.tabWidth": 2,
+  "prettier.useTabs": false,
+  "vue.server.hybridMode": false,
+  "eslint.codeActionsOnSave.rules": null,
+  "eslint.format.enable": true
+}

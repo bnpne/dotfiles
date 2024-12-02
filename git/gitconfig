@@ -19,4 +19,6 @@
   user = bnpne
 [user]
 	name = Ben Paine
-	email = bentppaine@gmail.com
+	email = ben.paine@metajive.com
+[includeIf "gitdir:~/Documents/metajive"]
+    path = ~/Documents/metajive/.gitconfig
