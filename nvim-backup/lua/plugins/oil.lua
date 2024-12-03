@@ -1,40 +1,40 @@
 return {
-  "stevearc/oil.nvim",
+  'stevearc/oil.nvim',
   dependencies = {
-    { "nvim-treesitter/nvim-treesitter" },
-    { "nvim-tree/nvim-web-devicons", lazy = true },
+    { 'nvim-treesitter/nvim-treesitter' },
+    { 'nvim-tree/nvim-web-devicons',    lazy = true },
   },
   keys = {
     {
-      "-",
+      '-',
       '<cmd>lua require("oil").open_float()<CR>',
-      desc = "Open parent directory",
+      desc = 'Open parent directory',
     },
   },
   init = function()
     local netrw_bufname
 
-    pcall(vim.api.nvim_clear_autocmds, { group = "FileExplorer" })
+    pcall(vim.api.nvim_clear_autocmds, { group = 'FileExplorer' })
 
-    vim.api.nvim_create_autocmd("VimEnter", {
-      pattern = "*",
+    vim.api.nvim_create_autocmd('VimEnter', {
+      pattern = '*',
       once = true,
       callback = function()
-        pcall(vim.api.nvim_clear_autocmds, { group = "FileExplorer" })
+        pcall(vim.api.nvim_clear_autocmds, { group = 'FileExplorer' })
       end,
     })
 
-    vim.api.nvim_create_autocmd("BufEnter", {
-      group = vim.api.nvim_create_augroup("oil.nvim", { clear = true }),
-      pattern = "*",
+    vim.api.nvim_create_autocmd('BufEnter', {
+      group = vim.api.nvim_create_augroup('oil.nvim', { clear = true }),
+      pattern = '*',
       callback = function()
         vim.schedule(function()
-          if vim.bo[0].filetype == "netrw" then
+          if vim.bo[0].filetype == 'netrw' then
             return
           end
           local bufname = vim.api.nvim_buf_get_name(0)
           if vim.fn.isdirectory(bufname) == 0 then
-            _, netrw_bufname = pcall(vim.fn.expand, "#:p:h")
+            _, netrw_bufname = pcall(vim.fn.expand, '#:p:h')
             return
           end
 
@@ -47,12 +47,12 @@ return {
           end
 
           -- ensure no buffers remain with the directory name
-          vim.api.nvim_buf_set_option(0, "bufhidden", "wipe")
+          vim.api.nvim_buf_set_option(0, 'bufhidden', 'wipe')
 
-          require("oil").open_float()
+          require('oil').open_float()
         end)
       end,
-      desc = "oil.nvim replacement for netrw",
+      desc = 'oil.nvim replacement for netrw',
     })
   end,
   opts = {
@@ -60,7 +60,7 @@ return {
     view_options = {
       show_hidden = true,
       is_always_hidden = function(name, bufnr)
-        return vim.startswith(name, ".DS_Store")
+        return vim.startswith(name, '.DS_Store')
       end,
     },
     float = {
@@ -68,7 +68,7 @@ return {
     },
   },
   config = function(_, opts)
-    require("oil").setup(opts)
-    vim.keymap.set("n", "-", require("oil").open_float, { desc = "Open parent directory" })
-  end,
+    require('oil').setup(opts)
+    vim.keymap.set('n', '-', require('oil').open_float, { desc = 'Open parent directory' })
+  end
 }
