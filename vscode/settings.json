@@ -1,12 +1,11 @@
 {
-  "editor.fontFamily": "Zed Mono, Menlo, Monaco, 'Courier New', monospace",
-  "editor.fontSize": 15,
+  "editor.fontFamily": "Iosevka SS04, Zed Mono, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontSize": 14,
   "editor.lineHeight": 18.5,
   "editor.letterSpacing": 0.3,
   "files.trimTrailingWhitespace": true,
   "editor.renderWhitespace": "none",
   "editor.formatOnSave": true,
-  "workbench.colorTheme": "Sequoia Monochrome",
 
   "vue.inlayHints.vBindShorthand": true,
   "diffEditor.ignoreTrimWhitespace": true,
@@ -61,6 +60,11 @@
       "before": ["<leader>", "x"],
       "commands": [":q"],
       "silent": true
+    },
+    {
+      "before": ["<C-c>"],
+      "commands": ["ciw"],
+      "silent": true
     }
   ],
 
@@ -77,8 +81,6 @@
   "vim.smartRelativeLine": true,
   "git.ignoreRebaseWarning": true,
   "emmet.syntaxProfiles": {},
-  "gruvboxMaterial.colorfulSyntax": true,
-  "gruvboxMaterial.darkContrast": "hard",
   "editor.semanticHighlighting.enabled": false,
 
   // Color Customizations
@@ -122,5 +124,10 @@
   "prettier.useTabs": false,
   "vue.server.hybridMode": false,
   "eslint.codeActionsOnSave.rules": null,
-  "eslint.format.enable": true
+  "eslint.format.enable": true,
+  "gruvboxMaterial.italicKeywords": true,
+  "gruvboxMaterial.darkContrast": "hard",
+  "workbench.colorTheme": "GitHub Dark Dimmed",
+  "workbench.startupEditor": "none",
+  "update.showReleaseNotes": false
 }
