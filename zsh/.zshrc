@@ -34,8 +34,6 @@ export BUN_INSTALL="$HOME/.config/bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 # Plugins
-source $ZSH_PATH/plugins/z/z.sh
-source $ZSH_PATH/plugins/fzf/fzf.zsh
 source $ZSH_PATH/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 source $ZSH_PATH/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 source $ZSH_PATH/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
